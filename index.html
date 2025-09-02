@@ -1,1 +1,180 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>S3B Studio — Creator Branding</title>
+  <meta name="description" content="Branding studio for YouTubers: merch, websites, and channel design." />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <style>
+    :root{
+      --bg:#0b0b0d;           /* page background */
+      --panel:#111114;        /* card/nav background */
+      --muted:#b8b8c7;        /* secondary text */
+      --text:#e9e9f1;         /* primary text */
+      --accent:#8b8bff;       /* accent for focus/cta */
+      --accent-2:#5ee1ff;     /* subtle gradient second color */
+      --ring: 0 0 0 2px rgba(139,139,255,.35), 0 0 40px rgba(94,225,255,.15);
+      --radius: 18px;
+      --shadow: 0 10px 35px rgba(0,0,0,.45);
+    }
+    *{box-sizing:border-box}
+    html,body{height:100%}
+    body{
+      margin:0; background:radial-gradient(1200px 600px at 70% -10%, rgba(94,225,255,.05), transparent 60%),
+      radial-gradient(1000px 500px at -10% -20%, rgba(139,139,255,.06), transparent 60%), var(--bg);
+      color:var(--text); font-family:Inter, system-ui, -apple-system, Segoe UI, Roboto, sans-serif; line-height:1.45;
+    }
+    a{color:inherit; text-decoration:none}
+    .container{max-width:1100px; margin:0 auto; padding:24px}
+
+    /* NAV */
+    .nav{position:sticky; top:0; z-index:10; backdrop-filter:saturate(120%) blur(10px);}
+    .nav-inner{display:flex; align-items:center; justify-content:space-between; gap:16px; padding:14px 18px; border-radius:calc(var(--radius) + 6px); background:rgba(17,17,20,.7); box-shadow:var(--shadow)}
+    .brand{display:flex; align-items:center; gap:12px}
+    .logo-wrap{display:grid; place-items:center; width:44px; height:44px; border-radius:12px; background:linear-gradient(145deg, rgba(139,139,255,.18), rgba(94,225,255,.10)); box-shadow:inset 0 0 0 1px rgba(255,255,255,.06)}
+    .brand-title{font-weight:700; letter-spacing:.3px}
+    .nav-cta{display:flex; gap:10px; align-items:center}
+    .btn{padding:10px 14px; border-radius:12px; background:transparent; border:1px solid rgba(255,255,255,.08); color:var(--text); font-weight:600; transition:.2s ease;}
+    .btn:hover{transform:translateY(-1px); border-color:rgba(255,255,255,.18)}
+    .btn.primary{background:linear-gradient(135deg, var(--accent), var(--accent-2)); color:#0b0b0d; border:none; box-shadow:var(--ring)}
+
+    /* HERO */
+    .hero{display:grid; grid-template-columns:1.3fr .9fr; gap:28px; margin-top:32px; align-items:center}
+    .hero h1{font-size:clamp(30px, 5vw, 52px); line-height:1.05; margin:0}
+    .hero p{color:var(--muted); margin:16px 0 24px}
+    .badge{display:inline-flex; align-items:center; gap:8px; padding:6px 10px; border-radius:999px; background:rgba(139,139,255,.12); color:#dfe3ff; font-size:12px; font-weight:700; letter-spacing:.35px}
+    .hero-panel{background:linear-gradient(180deg, rgba(255,255,255,.06), rgba(255,255,255,.03)); border:1px solid rgba(255,255,255,.08); padding:24px; border-radius:var(--radius); box-shadow:var(--shadow)}
+
+    /* PRICING */
+    .section{margin-top:56px}
+    .section h2{font-size:clamp(24px,3.6vw,36px); margin:0 0 18px}
+    .grid{display:grid; grid-template-columns:repeat(3,1fr); gap:18px}
+    .card{background:var(--panel); border:1px solid rgba(255,255,255,.08); border-radius:var(--radius); padding:22px; box-shadow:var(--shadow); position:relative; overflow:hidden}
+    .card:before{content:""; position:absolute; inset:-1px; border-radius:inherit; background:radial-gradient(500px 160px at 70% -40%, rgba(139,139,255,.17), transparent 60%); pointer-events:none}
+    .card h3{margin:0 0 6px; font-size:22px}
+    .price{font-size:34px; font-weight:800; margin:6px 0 14px; letter-spacing:.5px}
+    .features{list-style:none; padding:0; margin:0 0 18px; color:var(--muted)}
+    .features li{display:flex; gap:10px; align-items:flex-start; margin:10px 0}
+    .check{flex:0 0 20px; height:20px; border-radius:5px; display:grid; place-items:center; background:linear-gradient(135deg, var(--accent), var(--accent-2)); color:#0b0b0d; font-size:14px; font-weight:900}
+    .card .btn{width:100%; text-align:center}
+    .card.highlight{border-color:rgba(139,139,255,.45); box-shadow:0 0 0 1px rgba(139,139,255,.35), var(--shadow)}
+
+    /* FOOTER */
+    footer{margin:64px 0 24px; color:var(--muted); text-align:center; font-size:14px}
+
+    /* RESPONSIVE */
+    @media (max-width: 900px){
+      .hero{grid-template-columns:1fr;}
+    }
+    @media (max-width: 800px){
+      .grid{grid-template-columns:1fr}
+    }
+  </style>
+</head>
+<body>
+  <!-- NAVBAR -->
+  <div class="container nav">
+    <div class="nav-inner">
+      <div class="brand">
+        <!-- Minimal abstract logo: geometric B + play. Replace with <img src="logo.png" alt="logo" /> if you have your own file. -->
+        <div class="logo-wrap" aria-label="S3B logo">
+          <svg width="26" height="26" viewBox="0 0 26 26" fill="none" xmlns="http://www.w3.org/2000/svg" role="img">
+            <defs>
+              <linearGradient id="g" x1="0" y1="0" x2="1" y2="1">
+                <stop offset="0" stop-color="var(--accent)"/>
+                <stop offset="1" stop-color="var(--accent-2)"/>
+              </linearGradient>
+            </defs>
+            <rect x="1.25" y="1.25" width="23.5" height="23.5" rx="6" stroke="url(#g)" stroke-width="2.5"/>
+            <path d="M10.2 7.8c0-.9.98-1.46 1.74-.98l7.2 4.45c.75.46.75 1.5 0 1.96l-7.2 4.45c-.76.47-1.74-.09-1.74-.98V7.8z" fill="url(#g)"/>
+          </svg>
+        </div>
+        <span class="brand-title">S3B Studio</span>
+      </div>
+      <div class="nav-cta">
+        <a class="btn" href="#pricing">Pricing</a>
+        <a class="btn primary" href="mailto:hello@djs3b.com?subject=Brand%20Package%20Inquiry">Get started</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- HERO -->
+  <div class="container hero">
+    <div>
+      <span class="badge">CREATOR BRANDING • MERCH • WEBSITES</span>
+      <h1>Look pro. Sell merch. <br/>Grow faster.</h1>
+      <p>I set up merch, a slick website with your custom domain, and cohesive channel branding for YouTubers. You keep the revenue — pay only for what you need.</p>
+      <div class="nav-cta">
+        <a class="btn primary" href="#pricing">See packages</a>
+        <a class="btn" href="mailto:hello@djs3b.com?subject=Question%20about%20Packages">Ask a question</a>
+      </div>
+    </div>
+    <div class="hero-panel">
+      <strong style="display:block; margin-bottom:8px">What you get</strong>
+      <ul class="features">
+        <li><span class="check">✓</span><span>Custom site (dark, minimal) + domain hookup (Cloudflare / Squarespace / GitHub Pages)</span></li>
+        <li><span class="check">✓</span><span>Merch store configured (Fourthwall / Printful) with your art</span></li>
+        <li><span class="check">✓</span><span>Channel assets: banners, avatar, basic thumbnail system</span></li>
+        <li><span class="check">✓</span><span>Simple analytics & growth tips so you can iterate</span></li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- PRICING -->
+  <div class="container section" id="pricing">
+    <h2>Packages built for creators</h2>
+    <div class="grid">
+      <!-- Starter -->
+      <div class="card">
+        <h3>Starter</h3>
+        <div class="price">$59</div>
+        <ul class="features">
+          <li><span class="check">✓</span><span>Channel banner + avatar refresh</span></li>
+          <li><span class="check">✓</span><span>1-page site (link-in-bio style)</span></li>
+          <li><span class="check">✓</span><span>Basic thumbnail template</span></li>
+        </ul>
+        <a class="btn" href="mailto:hello@djs3b.com?subject=Starter%20Package">Choose Starter</a>
+      </div>
+
+      <!-- Pro -->
+      <div class="card highlight">
+        <h3>Pro</h3>
+        <div class="price">$149</div>
+        <ul class="features">
+          <li><span class="check">✓</span><span>Everything in Starter</span></li>
+          <li><span class="check">✓</span><span>Custom merch store setup</span></li>
+          <li><span class="check">✓</span><span>3-page site (Home, About, Shop)</span></li>
+          <li><span class="check">✓</span><span>Domain + email routing help</span></li>
+        </ul>
+        <a class="btn primary" href="mailto:hello@djs3b.com?subject=Pro%20Package">Choose Pro</a>
+      </div>
+
+      <!-- Premium -->
+      <div class="card">
+        <h3>Premium</h3>
+        <div class="price">$299</div>
+        <ul class="features">
+          <li><span class="check">✓</span><span>Everything in Pro</span></li>
+          <li><span class="check">✓</span><span>Full brand kit (logo variants, fonts, color system)</span></li>
+          <li><span class="check">✓</span><span>Thumbnail system + 5 ready-to-post thumbnails</span></li>
+          <li><span class="check">✓</span><span>Launch day support + tweaks</span></li>
+        </ul>
+        <a class="btn" href="mailto:hello@djs3b.com?subject=Premium%20Package">Choose Premium</a>
+      </div>
+    </div>
+  </div>
+
+  <footer class="container">
+    © <span id="y"></span> S3B Studio — Built with love for creators.
+  </footer>
+
+  <script>
+    // Just sets the current year in the footer
+    document.getElementById('y').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
 
